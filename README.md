@@ -19,9 +19,22 @@ use discrimenum::{Hash, PartialEq};
 
 > Keep in mind that this will shadow the existing derives automatically imported in the prelude, preventing non-discrimenum usage for the current scope.
 >
-> If this is undesired, either:
-> * Qualify it like `#[derive(discrimenum::Hash)]`
-> * Or, rename it like `use discrimenum::Hash as DHash;`
+> If this is undesired, either...
+> * Qualify it: `#[derive(discrimenum::Hash)]`
+> * Rename it: `use discrimenum::Hash as DHash;`
+> * Scope it:
+> 
+>   ```rust
+>   // ...
+>   {
+>     use discrimenum::Hash;
+>     #[derive(Hash)]
+>     enum {
+>       // ...
+>     }
+>   }
+>   // ...
+>   ```
 
 Then apply it to your enum:
 
