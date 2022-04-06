@@ -51,6 +51,6 @@ enum MyGenericEnum<T> {
 // Notice we can put `T` instead of `T: Hash + PartialEq` 
 ```
 
-### Difference from similar crates
+### Difference from similar crates?
 
 None. Just felt like adding another 😉
