@@ -1,0 +1,19 @@
+[package]
+name = "discrimenum"
+version = "0.1.0"
+edition = "2021"
+authors = ["Gino Valente <gino.valente.code@gmail.com>"]
+description = "Derive `Hash` and `PartialEq` on enums where only the discriminant matters."
+license = "MIT OR Apache-2.0"
+keywords = ["enum", "variant", "discriminant", "derive", "equals"]
+categories = ["rust-patterns"]
+readme = "README.md"
+exclude = [".github/**/*"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+proc-macro2 = "1.0"
