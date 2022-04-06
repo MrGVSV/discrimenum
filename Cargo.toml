@@ -9,7 +9,7 @@ license = "MIT OR Apache-2.0"
 keywords = ["enum", "variant", "discriminant", "derive", "equals"]
 categories = ["rust-patterns"]
 readme = "README.md"
-exclude = [".github/**/*"]
+exclude = [".github/**/*", ".idea/**/*"]
 
 [lib]
 proc-macro = true
