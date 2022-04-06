@@ -29,7 +29,7 @@ use discrimenum::{Hash, PartialEq};
 >   {
 >     use discrimenum::Hash;
 >     #[derive(Hash)]
->     enum {
+>     enum Foo {
 >       // ...
 >     }
 >   }
@@ -39,7 +39,9 @@ use discrimenum::{Hash, PartialEq};
 Then apply it to your enum:
 
 ```rust
-#[derive(Hash, PartialEq)]
+use discrimenum::{Hash, PartialEq};
+
+#[derive(Hash, PartialEq, Debug)]
 enum MyEnum {
     A(usize),
     B(usize)
@@ -55,6 +57,8 @@ This also applies to generic enums. In fact, since we only care about the discri
 bound by `Hash` or `PartialEq`:
 
 ```rust
+use discrimenum::{Hash, PartialEq};
+
 #[derive(Hash, PartialEq)]
 enum MyGenericEnum<T> {
     A(T),
